@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700&family=Signika:wght@500&display=swap');
+
+:root {
+    --znx_background_1: rgba(8, 42, 58, 0.5);
+    --znx_szef: rgb(0, 156, 228);
+    --znx_white: rgb(255, 255, 255); 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    color: var(--znx_white);
+}
+
+.znx_hud_container {
+    position: absolute;
+    right: 1.5%;
+    bottom: 2.2%;
+}
+
+.znx_hud_box {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.znx_hud_status_item {
+    position: relative;
+    transform: scale(1.1);
+    width: 58px;
+    height: 58px;
+    border-radius: 10px;
+    background-color: var(--znx_background_1);
+    clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+}
+
+.znx_hud_item {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px var(--znx_background_1);
+    transform: translate(-50%, -50%);
+    background-color: var(--znx_background_1);
+    clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+}
+
+.znx_hud_icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 24px;
+    font-size: 23px;
+    color: var(--znx_szef);
+    transform: translate(-50%, -50%);
+}
+
+.znx_carhud_item {
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    padding: 0px 10px;
+    border-radius: 2px;
+    text-shadow: 0px 0px 20px rgb(0, 0, 0);
+    background-color: var(--znx_background_1);
+}
+
+.znx_carhud_speed_box {
+    position: relative;
+    width: 70px;
+    height: 10px;
+    top: 50%;
+    border-radius: 30px;
+    transform: translate(0%, -50%);
+    background-color: var(--znx_background_1);
+}
+
+.znx_carhud_speed {
+    height: 100%;
+    border-radius: 30px;
+    background-color: var(--znx_szef);
+}

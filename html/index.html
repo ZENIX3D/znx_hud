@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" >
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="scripts/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="znx_hud_container" id="znx_hud_container">
+            <div class="znx_hud_box">
+                <div class="znx_hud_status_item">
+                    <div class="znx_hud_item"></div>
+                    <div class="znx_hud_icon" style="margin-left: -1px;">
+                        <svg height="27" viewBox="0 0 24 24" width="27" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="znx_health" x1="0%" y1="100%" x2="0%" y2="0%">
+                                    <stop offset="100%" style="stop-color: var(--znx_white); stop-opacity: 1"/>
+                                    <stop offset="100%" style="stop-color: var(--znx_white); stop-opacity: 1"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#znx_health)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"				</svg>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="znx_hud_status_item" id="znx_armor_item">
+                    <div class="znx_hud_item"></div>
+                    <div class="znx_hud_icon">
+                        <svg height="25" viewBox="0 0 24 24" width="25" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="znx_armor" x1="0%" y1="100%" x2="0%" y2="0%">
+                                    <stop offset="100%" style="stop-color: var(--znx_white); stop-opacity: 1"/>
+                                    <stop offset="100%" style="stop-color: var(--znx_white); stop-opacity: 1"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#znx_armor)" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />				
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="znx_hud_status_item">
+                    <div class="znx_hud_item"></div>
+                    <div class="znx_hud_icon">
+                        <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <defs>
+                                <linearGradient id="znx_burger" x1="0%" y1="100%" x2="0%" y2="0%">
+                                    <stop offset="100%" style="stop-color: var(--znx_szef); stop-opacity: 1"/>
+                                    <stop offset="100%" style="stop-color: var(--znx_szef); stop-opacity: 1"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#znx_burger)" d="M61.1 224C45 224 32 211 32 194.9c0-1.9 .2-3.7 .6-5.6C37.9 168.3 78.8 32 256 32s218.1 136.3 223.4 157.3c.5 1.9 .6 3.7 .6 5.6c0 16.1-13 29.1-29.1 29.1L61.1 224zM144 128a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm240 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32zM272 96a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zM16 304c0-26.5 21.5-48 48-48l384 0c26.5 0 48 21.5 48 48s-21.5 48-48 48L64 352c-26.5 0-48-21.5-48-48zm16 96c0-8.8 7.2-16 16-16l416 0c8.8 0 16 7.2 16 16l0 16c0 35.3-28.7 64-64 64L96 480c-35.3 0-64-28.7-64-64l0-16z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="znx_hud_status_item">
+                    <div class="znx_hud_item"></div>
+                    <div class="znx_hud_icon" style="margin-left: 3px;">
+                        <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <defs>
+                                <linearGradient id="znx_water" x1="0%" y1="100%" x2="0%" y2="0%">
+                                    <stop offset="100%" style="stop-color: var(--znx_szef); stop-opacity: 1"/>
+                                    <stop offset="100%" style="stop-color: var(--znx_szef); stop-opacity: 1"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#znx_water)" d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0l1.8 0c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="znx_hud_status_item">
+                    <div class="znx_hud_item"></div>
+                    <div class="znx_hud_icon">
+                        <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <defs>
+                                <linearGradient id="znx_voice" x1="0%" y1="100%" x2="0%" y2="0%">
+                                    <stop offset="100%" style="stop-color: var(--znx_szef); stop-opacity: 1"/>
+                                    <stop offset="100%" style="stop-color: var(--znx_szef); stop-opacity: 1"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#znx_voice)" d="M237.541 328.897c25.128 0 46.632-8.946 64.523-26.83s26.833-39.399 26.833-64.525V91.365c0-25.126-8.938-46.632-26.833-64.525S262.669 0 237.541 0s-46.632 8.951-64.524 26.84-26.838 39.399-26.838 64.525v146.177c0 25.125 8.949 46.641 26.838 64.525s39.399 26.83 64.524 26.83zM396.563 188.15c-3.606-3.617-7.898-5.426-12.847-5.426s-9.226 1.809-12.847 5.426c-3.613 3.616-5.421 7.898-5.421 12.845v36.547c0 35.214-12.518 65.333-37.548 90.362-25.022 25.03-55.145 37.545-90.36 37.545s-65.334-12.515-90.365-37.545c-25.028-25.022-37.541-55.147-37.541-90.362v-36.547c0-4.947-1.809-9.229-5.424-12.845s-7.895-5.426-12.847-5.426-9.235 1.809-12.85 5.426-5.426 7.898-5.426 12.845v36.547c0 42.065 14.04 78.659 42.112 109.776s62.762 48.961 104.068 53.526v37.691h-73.089c-4.949 0-9.231 1.811-12.847 5.428s-5.426 7.898-5.426 12.847c0 4.941 1.809 9.233 5.426 12.847s7.898 5.428 12.847 5.428h182.719c4.948 0 9.236-1.813 12.847-5.428 3.621-3.613 5.431-7.905 5.431-12.847 0-4.948-1.81-9.232-5.431-12.847-3.61-3.617-7.898-5.428-12.847-5.428h-73.08v-37.691c41.299-4.565 75.985-22.408 104.061-53.526s42.12-67.711 42.12-109.776v-36.547c0-4.946-1.813-9.225-5.435-12.845z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="znx_hud_box" id="car_hud" style="">
+                <div class="znx_carhud_item" id="znx_street"></div>
+                <div class="znx_carhud_item" id="znx_speed"></div>
+                <div class="znx_carhud_item"><div class="znx_carhud_speed_box"><div class="znx_carhud_speed" id="znx_speed_2"></div></div></div>
+            </div>
+        </div>
+    </body>
+</html>
