@@ -22,7 +22,10 @@ znx.carhud = function()
 end
 
 znx.hud = function()
-    AddTextEntry('FE_THDR_GTAO', Zenix.TextEntry)
+    if Zenix.TextEntryEnable == true then
+        AddTextEntry('FE_THDR_GTAO', Zenix.TextEntry)
+    end
+
     ReplaceHudColourWithRgba(142, 3, 150, 252, 255)
 
     while true do        
@@ -50,30 +53,10 @@ znx.hud = function()
         local znx_data = { znx_health = znx_health, znx_voice = znx_voice, znx_armor = znx_armor }
 
         SendNUIMessage({ action = 'znx_hud_status', znx_data = znx_data, znx_state = true })
-        SendNUIMessage({ action = 'znx_hud_voice', znx_data = { znx_volume = 'LocalPlayer.state.proximity.mode', znx_state = znx_state }})
+        SendNUIMessage({ action = 'znx_hud_voice', znx_data = { znx_volume = LocalPlayer.state.proximity.mode, znx_state = znx_state }})
 
         znx.carhud()
     end
 end
 
 znx.hud()
-
-znx.fixmap = function()
-	SetMapZoomDataLevel(0, 0.96, 0.9, 0.08, 0.0, 0.0)
-    SetMapZoomDataLevel(1, 1.6, 0.9, 0.08, 0.0, 0.0)
-    SetMapZoomDataLevel(2, 8.6, 0.9, 0.08, 0.0, 0.0)
-    SetMapZoomDataLevel(3, 12.3, 0.9, 0.08, 0.0, 0.0)
-	SetMapZoomDataLevel(4, 22.3, 0.9, 0.08, 0.0, 0.0)
-	
-    while true do
-		Wait(1000)
-        
-		if IsPedOnFoot(GetPlayerPed(-1)) then 
-			SetRadarZoom(1100)
-		elseif IsPedInAnyVehicle(GetPlayerPed(-1), true) then
-			SetRadarZoom(1100)
-		end
-    end
-end
-
-znx.fixmap()
