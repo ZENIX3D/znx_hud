@@ -3,6 +3,8 @@ window.addEventListener('message', function(znx_event) {
         case 'znx_hud_status':
 
             $('#znx_health').html(`<stop offset="` + znx_event.data.znx_data.znx_health + `%" style="stop-color: var(--znx_szef);stop-opacity:1" /><stop offset="` + znx_event.data.znx_data.znx_health + `%" style="stop-color:rgb(255, 255, 255);stop-opacity:1"/>`)
+            $('#znx_thirst').html(`<stop offset="` + znx_event.data.znx_data.znx_thirst + `%" style="stop-color: var(--znx_szef);stop-opacity:1" /><stop offset="` + znx_event.data.znx_data.znx_thirst + `%" style="stop-color:rgb(255, 255, 255);stop-opacity:1"/>`)
+            $('#znx_hunger').html(`<stop offset="` + znx_event.data.znx_data.znx_hunger + `%" style="stop-color: var(--znx_szef);stop-opacity:1" /><stop offset="` + znx_event.data.znx_data.znx_hunger + `%" style="stop-color:rgb(255, 255, 255);stop-opacity:1"/>`)
             
             if (znx_event.data.znx_data.armour > 0) {
                 $('#znx_armor_item').css('display', 'flex')

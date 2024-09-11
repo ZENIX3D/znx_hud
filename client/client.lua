@@ -31,6 +31,14 @@ znx.hud = function()
     while true do        
         Wait(100)
 
+        TriggerEvent('esx_status:getStatus', 'hunger', function(status)
+            znx_hunger = status.getPercent()
+        end)
+
+        TriggerEvent('esx_status:getStatus', 'thirst', function(status)
+            znx_thirst = status.getPercent()
+        end)
+        
         if IsPauseMenuActive() then
             if znx_show then
                 znx_show = false
@@ -50,10 +58,10 @@ znx.hud = function()
         local znx_state = NetworkIsPlayerTalking(znx_player)
         local znx_health = GetEntityHealth(znx_player_id) - 100
         local znx_armor = GetPedArmour(znx_player_id)
-        local znx_data = { znx_health = znx_health, znx_voice = znx_voice, znx_armor = znx_armor }
+        local znx_data = { znx_health = znx_health, znx_voice = znx_voice, znx_armor = znx_armor, znx_hunger = znx_hunger, znx_thirst = znx_thirst }
 
         SendNUIMessage({ action = 'znx_hud_status', znx_data = znx_data, znx_state = true })
-        SendNUIMessage({ action = 'znx_hud_voice', znx_data = { znx_volume = LocalPlayer.state.proximity.mode, znx_state = znx_state }})
+        SendNUIMessage({ action = 'znx_hud_voice', znx_data = { znx_volume = "LocalPlayer.state.proximity.mode", znx_state = znx_state }})
 
         znx.carhud()
     end
