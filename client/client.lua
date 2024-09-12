@@ -1,7 +1,7 @@
 local znx = {}
 local znx_show = true
 
-znx.carhud = function()
+znx.CarHud = function()
     local znx_player_id = PlayerPedId()
 
     if IsPedInAnyVehicle(znx_player_id) and znx_show then
@@ -21,7 +21,7 @@ znx.carhud = function()
     end
 end
 
-znx.hud = function()
+znx.Hud = function()
     if Zenix.TextEntryEnable == true then
         AddTextEntry('FE_THDR_GTAO', Zenix.TextEntry)
     end
@@ -63,8 +63,8 @@ znx.hud = function()
         SendNUIMessage({ action = 'znx_hud_status', znx_data = znx_data, znx_state = true })
         SendNUIMessage({ action = 'znx_hud_voice', znx_data = { znx_volume = "LocalPlayer.state.proximity.mode", znx_state = znx_state }})
 
-        znx.carhud()
+        znx.CarHud()
     end
 end
 
-znx.hud()
+znx.Hud()
