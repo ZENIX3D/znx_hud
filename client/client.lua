@@ -61,7 +61,7 @@ znx.Hud = function()
         local znx_data = { znx_health = znx_health, znx_voice = znx_voice, znx_armor = znx_armor, znx_hunger = znx_hunger, znx_thirst = znx_thirst }
 
         SendNUIMessage({ action = 'znx_hud_status', znx_data = znx_data, znx_state = true })
-        SendNUIMessage({ action = 'znx_hud_voice', znx_data = { znx_volume = "LocalPlayer.state.proximity.mode", znx_state = znx_state }})
+        SendNUIMessage({ action = 'znx_hud_voice', znx_data = { znx_volume = LocalPlayer.state.proximity.mode, znx_state = znx_state }})
 
         znx.CarHud()
     end
